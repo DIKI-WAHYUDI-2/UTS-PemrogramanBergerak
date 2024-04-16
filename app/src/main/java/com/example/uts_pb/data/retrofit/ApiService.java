@@ -14,11 +14,11 @@ import retrofit2.http.Query;
 
 public interface ApiService {
 
-    @Headers({"Authorization: token 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"})
+    @Headers({"Authorization: token "})
     @GET("search/users")
     Call<GithubSearchResponse> searchUsers(@Query("q") String query);
 
-    @Headers({"Authorization: token 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"})
+    @Headers({"Authorization: token "})
     @GET("users/{username}")
     Call<GithubUser> getUser(@Path("username") String username);
 

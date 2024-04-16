@@ -33,7 +33,6 @@ public class Detail extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             String username = extras.getString("username");
-            String token = "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";
             ApiService apiService = ApiConfig.getApiService();
             Call<GithubUser> userCall = apiService.getUser(username);
 
